@@ -131,11 +131,11 @@ if(score>10){
     highs.innerHTML = highscore;
     if (highscore !== null) {
       if (score > highscore) {
-        localStorage.setItem("highscore", score);
+        localStorage.setItem("highscore", score+4);
         highs.innerHTML = highscore;
       }
     } else {
-      localStorage.setItem("highscore", score);
+      localStorage.setItem("highscore", score+4);
       highs.innerHTML = highscore;
     }
   
