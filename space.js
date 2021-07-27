@@ -36,23 +36,44 @@ window.requestAnimationFrame(function draw() {
   box.drawImage(alienship, alienship2_x, 235, 50, 50);
   box.drawImage(alienship, alienship3_x, 395, 50, 50);
 
+console.log(score);
+if (score>20){
+  alienship_x -= 4;
+  alienship1_x -= dx+1;
+  alienship2_x -= 4;
+  alienship3_x -= 3.5;
+  box.drawImage(craft, craft_x, craft_y, 80, 80);
+  box.drawImage(alienship, alienship_x, alienship1_y, 50, 50);
+  box.drawImage(alienship, alienship1_x, alienship1_y, 50, 50);
+  box.drawImage(alienship, alienship2_x+90, 260, 50, 50);
+  box.drawImage(alienship, alienship3_x, 410, 50, 50);
 
+}
+if(score>10){
+  alienship_x -= 3.5;
+  alienship1_x -= dx+0.5;
+  alienship2_x -= 3.5;
+  alienship3_x -= 3;
+  box.drawImage(craft, craft_x, craft_y, 80, 80);
+  box.drawImage(alienship, alienship_x, alienship1_y, 50, 50);
+  box.drawImage(alienship, alienship1_x, alienship1_y, 50, 50);
+  box.drawImage(alienship, alienship2_x, 235, 50, 50);
+  box.drawImage(alienship, alienship3_x, 400, 50, 50);
+}
 
-  if (alienship3_x < -50) {
+  if (alienship3_x < -100) {
     alienship3_x = 760;
   }
 
-  if (alienship2_x < -50) {
+  if (alienship2_x < -100) {
     alienship2_x = 760;
-    score++;
-    yourscore.innerHTML = score;
   }
 
-  if (alienship1_x < -50) {
+  if (alienship1_x < -100) {
     alienship1_x = 760;
   }
 
-  if (alienship_x < -50) {
+  if (alienship_x < -100) {
     alienship_x = 760;
 
     document.addEventListener("keydown", function (e) {
@@ -143,20 +164,14 @@ window.requestAnimationFrame(function draw() {
   console.log(alienship1_x);
   console.log(alienship1_y);
 
-
-  if (
-    (cx === alienship_x  && cy === alienship1_y) ||
-    (cx === alienship1_x && cy === alienship1_y) ||
-    (cx === alienship2_x && cy === 235) ||
-    (cx === alienship3_x && cy === 395)
-  ){
-    var r = alert(
-      "Game Over : Refresh the game and then press OK to play again!"
-    );
-    if (r == false) {
-      window.location.reload();
-    }
+  let x_axis = Math.abs(bullet.x - alienship.x) <= Math.max(bullet.width,alienship.width);
+  let y_axis = Math.abs(bullet.y - alienship.y) <= Math.max(bullet.height,alienship.height);
+  if(!x_axis && y_axis){
+    alert("game over");
   }
+  
+
+
   
 });
 
@@ -187,4 +202,6 @@ setInterval(function updateCountdown() {
 
   countdownEl.innerHTML = `${minutes}:${seconds}`;
   time++;
+  score++;
+  yourscore.innerHTML = score+4;
 }, 1000);
