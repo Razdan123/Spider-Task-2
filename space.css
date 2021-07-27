@@ -1,0 +1,108 @@
+@font-face {
+    font-family: gamefont;
+    src: url('RuslanDisplay-Regular.ttf');
+}
+@font-face {
+    font-family: gamefont2;
+    src: url('RuslanDisplay-Regular.ttf');
+}
+
+body {
+    background-image: url("spaceship-3365256.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    
+  }
+
+#canvas{
+    border-top:80%;
+    border: solid 5px rgb(209, 178, 4);
+    background-image: url("pia21603.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+}
+h1{
+    font-size: 3.4em;
+    text-align: center;
+    font-family: gamefont;
+    color: rgb(240, 6, 201);
+    position: absolute;
+    top: -20%;
+    left: 4%;
+    font-weight: lighter;
+    font-stretch: ultra-expanded;
+}
+
+#timer{
+    font-family: gamefont2;
+    position: absolute;
+    top: -0.1%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6em;
+}
+#timern{
+    font-family: gamefont2;
+    position: absolute;
+    top: -0.1%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6em;
+}
+#your{
+    font-family: gamefont2;
+    position: absolute;
+    top: -0.1%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6em;
+}
+#yours{
+    font-family: gamefont2;
+    position: absolute;
+    top: -0.1%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6em;
+}
+#high{
+    font-family: gamefont2;
+    position: absolute;
+    top: 0.4%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4em;
+}
+#highs{
+    font-family: gamefont2;
+    position: absolute;
+    top: -0.4%;
+    left: 93%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6em;
+}
+button{
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6em;
+    color: rgb(7, 7, 7);
+    background: none;
+    background-color: #7efc17;
+    border-radius: 7px;
+    border: 4px solid rgb(108, 0, 250);
+    transition: 0.4s;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(19, 228, 243);
+    border-color: midnightblue;
+    color: white;
+  }
